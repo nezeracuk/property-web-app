@@ -46,7 +46,7 @@ const PropertySchema = new Schema(
       weekly: Number,
       monthly: Number,
     },
-    saler_info: {
+    seller_info: {
       name: String,
       email: String,
       phone: String,

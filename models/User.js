@@ -1,5 +1,4 @@
 import { Schema, model, models } from 'mongoose';
-import { unique } from 'next/dist/build/utils';
 
 const userSchema = new Schema(
   {
@@ -13,7 +12,7 @@ const userSchema = new Schema(
       required: [true, 'Username is required'],
     },
     image: {
-      type: string,
+      type: String,
     },
     bookmarks: [
       {
