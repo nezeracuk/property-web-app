@@ -6,7 +6,13 @@ const PropertyCard = ({ property }) => {
   return (
     <div className="rounded-xl shadow-md relative">
       <Link href={`/properties/${property._id}`}>
-        <Image src={property.images[0]} width={500} height={300} alt="" className="w-full h-[300px] rounded-t-xl" />
+        <Image
+          src={property.images[0]}
+          width={500}
+          height={300}
+          alt=""
+          className="w-full h-[300px] rounded-t-xl object-contain"
+        />
       </Link>
       <div className="p-4">
         <div className="text-left md:text-center lg:text-left mb-6">
