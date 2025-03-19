@@ -5,7 +5,9 @@ import { FaBed, FaBath, FaRulerCombined, FaMoneyBill, FaMapMarker } from 'react-
 const PropertyCard = ({ property }) => {
   return (
     <div className="rounded-xl shadow-md relative">
-      <Image src={property.images[0]} width={500} height={300} alt="" className="w-full h-auto rounded-t-xl" />
+      <Link href={`/properties/${property._id}`}>
+        <Image src={property.images[0]} width={500} height={300} alt="" className="w-full h-[300px] rounded-t-xl" />
+      </Link>
       <div className="p-4">
         <div className="text-left md:text-center lg:text-left mb-6">
           <div className="text-gray-600">{property.type}</div>
@@ -37,17 +39,19 @@ const PropertyCard = ({ property }) => {
         </div>
 
         <div className="flex justify-center gap-4 text-green-900 text-sm mb-4">
-          {property.rates.nightly && (
+          {property.rates.nightly > 1 && (
             <p>
               <FaMoneyBill className="md:hidden lg:inline mr-1" />
               {property.rates.nightly} Nigthly
             </p>
           )}
-          <p>
-            <FaMoneyBill className="md:hidden lg:inline mr-1" />
-            {property.rates.weekly} Weekly
-          </p>
-          {property.rates.monthly && (
+          {property.rates.weekly > 1 && (
+            <p>
+              <FaMoneyBill className="md:hidden lg:inline mr-1" />
+              {property.rates.weekly} Weekly
+            </p>
+          )}
+          {property.rates.monthly > 1 && (
             <p>
               <FaMoneyBill className="md:hidden lg:inline mr-1" />
               {property.rates.monthly} Monthly

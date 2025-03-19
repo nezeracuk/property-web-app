@@ -17,6 +17,10 @@ const ProfileProperties = ({ properties: initialProperties }) => {
 
     toast.success('Property Deleted Successfully');
   };
+
+  if (properties.length === 0) {
+    return <p>You have no properties added yet.</p>;
+  }
   return properties.map((property) => (
     <div key={property._id} className="mb-10">
       <Link href={`/properties/${property._id}`}>

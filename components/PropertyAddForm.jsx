@@ -115,13 +115,13 @@ const PropertyAddForm = () => {
           <label htmlFor="beds" className="block text-gray-700 font-bold mb-2">
             Beds
           </label>
-          <input type="number" id="beds" name="beds" className="border rounded w-full py-2 px-3" required />
+          <input type="number" id="beds" min="1" name="beds" className="border rounded w-full py-2 px-3" required />
         </div>
         <div className="w-full sm:w-1/3 px-2">
           <label htmlFor="baths" className="block text-gray-700 font-bold mb-2">
             Baths
           </label>
-          <input type="number" id="baths" name="baths" className="border rounded w-full py-2 px-3" required />
+          <input type="number" id="baths" min="1" name="baths" className="border rounded w-full py-2 px-3" required />
         </div>
         <div className="w-full sm:w-1/3 pl-2">
           <label htmlFor="square_feet" className="block text-gray-700 font-bold mb-2">
@@ -130,6 +130,7 @@ const PropertyAddForm = () => {
           <input
             type="number"
             id="square_feet"
+            min="1"
             name="square_feet"
             className="border rounded w-full py-2 px-3"
             required
@@ -234,19 +235,37 @@ const PropertyAddForm = () => {
             <label htmlFor="weekly_rate" className="mr-2">
               Weekly
             </label>
-            <input type="number" id="weekly_rate" name="rates.weekly" className="border rounded w-full py-2 px-3" />
+            <input
+              type="number"
+              id="weekly_rate"
+              min="1"
+              name="rates.weekly"
+              className="border rounded w-full py-2 px-3"
+            />
           </div>
           <div className="flex items-center">
             <label htmlFor="monthly_rate" className="mr-2">
               Monthly
             </label>
-            <input type="number" id="monthly_rate" name="rates.monthly" className="border rounded w-full py-2 px-3" />
+            <input
+              type="number"
+              id="monthly_rate"
+              min="1"
+              name="rates.monthly"
+              className="border rounded w-full py-2 px-3"
+            />
           </div>
           <div className="flex items-center">
             <label htmlFor="nightly_rate" className="mr-2">
               Nightly
             </label>
-            <input type="number" id="nightly_rate" name="rates.nightly" className="border rounded w-full py-2 px-3" />
+            <input
+              type="number"
+              id="nightly_rate"
+              min="1"
+              name="rates.nightly"
+              className="border rounded w-full py-2 px-3"
+            />
           </div>
         </div>
       </div>

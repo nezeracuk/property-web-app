@@ -92,6 +92,7 @@ const PropertyEditForm = ({ property }) => {
           <input
             type="number"
             id="beds"
+            min="1"
             name="beds"
             className="border rounded w-full py-2 px-3"
             defaultValue={property.beds}
@@ -105,6 +106,7 @@ const PropertyEditForm = ({ property }) => {
           <input
             type="number"
             id="baths"
+            min="1"
             name="baths"
             className="border rounded w-full py-2 px-3"
             required
@@ -118,6 +120,7 @@ const PropertyEditForm = ({ property }) => {
           <input
             type="number"
             id="square_feet"
+            min="1"
             name="square_feet"
             className="border rounded w-full py-2 px-3"
             defaultValue={property.square_feet}
@@ -307,6 +310,7 @@ const PropertyEditForm = ({ property }) => {
             <input
               type="number"
               id="weekly_rate"
+              min="0"
               name="rates.weekly"
               className="border rounded w-full py-2 px-3"
               defaultValue={property.rates.weekly}
@@ -319,6 +323,7 @@ const PropertyEditForm = ({ property }) => {
             <input
               type="number"
               id="monthly_rate"
+              min="0"
               name="rates.monthly"
               className="border rounded w-full py-2 px-3"
               defaultValue={property.rates.monthly}
@@ -331,6 +336,7 @@ const PropertyEditForm = ({ property }) => {
             <input
               type="number"
               id="nightly_rate"
+              min="0"
               name="rates.nightly"
               className="border rounded w-full py-2 px-3"
               defaultValue={property.rates.nightly}
@@ -350,7 +356,7 @@ const PropertyEditForm = ({ property }) => {
           className="border rounded w-full py-2 px-3"
           placeholder="Name"
           required
-          defaultValue={property.seller_info.name}
+          defaultValue={property.seller_info?.name}
         />
       </div>
       <div className="mb-4">
@@ -363,7 +369,7 @@ const PropertyEditForm = ({ property }) => {
           name="seller_info.email"
           className="border rounded w-full py-2 px-3"
           placeholder="Email address"
-          defaultValue={property.seller_info.email}
+          defaultValue={property.seller_info?.email}
           required
         />
       </div>
@@ -378,7 +384,7 @@ const PropertyEditForm = ({ property }) => {
           className="border rounded w-full py-2 px-3"
           placeholder="Phone"
           required
-          defaultValue={property.seller_info.phone}
+          defaultValue={property.seller_info?.phone}
         />
       </div>
 
