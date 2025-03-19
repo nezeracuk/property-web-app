@@ -15,7 +15,6 @@ Here are some of the current features that Property Pulse has:
 - [x] Property search
 - [x] Internal messages with 'unread' notifications
 - [x] Photoswipe image gallery
-- [x] Mapbox maps
 - [x] Toast notifications
 - [x] Property bookmarking / saved properties
 - [x] Property sharing to social media
@@ -35,8 +34,6 @@ Property Pulse uses the following technologies:
 - [Photoswipe](https://photoswipe.com/)
 - [Cloudinary](https://cloudinary.com/)
 - [Mapbox](https://www.mapbox.com/)
-- [React Map GL](https://visgl.github.io/react-map-gl/)
-- [React Geocode](https://www.npmjs.com/package/react-geocode)
 - [React Spinners](https://www.npmjs.com/package/react-spinners)
 - [React Toastify](https://fkhadra.github.io/react-toastify/)
 - [React Share](https://www.npmjs.com/package/react-share)
@@ -49,7 +46,7 @@ Property Pulse uses the following technologies:
 - MongoDB Atlas account and a cluster. Sign up and create a cluster at [MongoDB](https://www.mongodb.com/)
 - Cloudinary account. Sign up at [Cloudinary](https://cloudinary.com/)
 - Google console account. Sign up at [Google Cloud](https://console.cloud.google.com/)
-- 
+  
 ### `.env` File
 
 Rename the `env.example` file to `.env` and fill in the following environment variables:
@@ -61,19 +58,25 @@ Rename the `env.example` file to `.env` and fill in the following environment va
   openssl rand -base64 32
   ```
 - Get your Cloudinary cloud name, API key, and API secret from your Cloudinary account and add them to `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, and `CLOUDINARY_API_SECRET`.
-- Get your Mapbox token from your Mapbox account and add it to `NEXT_PUBLIC_MAPBOX_TOKEN`.
-- Get your Google Geocoding API key from your Google console account and add it to `NEXT_PUBLIC_GOOGLE_GEOCODING_API_KEY`.
 
 ### Install Dependencies
 
 ```bash
 npm install
 ```
+or
+```bash
+yarn install
+```
 
 ### Run the Development Server
 
 ```bash
 npm run dev
+```
+or
+```bash
+yarn run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
